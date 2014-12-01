@@ -1,0 +1,8 @@
+Tema ide  : Animasi robot (sejenis Mobile Suit)
+
+Cerita    : Robot tersebut akan masuk ke dalam scene dan melakukan beberapa animasi
+	    gerakan
+
+Interaksi : Rencananya akan pakai tombol interaksi yang mempengaruhi animasinya,
+	    cuma untuk detail lebih lanjut masih dipikirkan dulu 
+	    (seperti gerakan yang dianimasikan, dsb)
