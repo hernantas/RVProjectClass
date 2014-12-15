@@ -4,31 +4,27 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: Bumi
-    100002: Camera
-    100004: Jupiter
-    100006: Lamp
-    100008: Mars
-    100010: Matahari
-    100012: Merkurius
-    100014: Neptunus
-    100016: Pluto
-    100018: Saturnus
-    100020: //RootNode
-    100022: Uranus
-    100024: Venus
+    100002: Jupiter
+    100004: Mars
+    100006: Matahari
+    100008: Merkurius
+    100010: Neptunus
+    100012: Pluto
+    100014: Saturnus
+    100016: //RootNode
+    100018: Uranus
+    100020: Venus
     400000: Bumi
-    400002: Camera
-    400004: Jupiter
-    400006: Lamp
-    400008: Mars
-    400010: Matahari
-    400012: Merkurius
-    400014: Neptunus
-    400016: Pluto
-    400018: Saturnus
-    400020: //RootNode
-    400022: Uranus
-    400024: Venus
+    400002: Jupiter
+    400004: Mars
+    400006: Matahari
+    400008: Merkurius
+    400010: Neptunus
+    400012: Pluto
+    400014: Saturnus
+    400016: //RootNode
+    400018: Uranus
+    400020: Venus
     2300000: Bumi
     2300002: Jupiter
     2300004: Mars
