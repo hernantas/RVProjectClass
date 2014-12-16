@@ -15,6 +15,7 @@ ModelImporter:
     100018: Sphere
     100020: Uranus
     100022: Venus
+    100024: Saturnus
     400000: Bumi
     400002: Circle
     400004: Jupiter
@@ -27,6 +28,7 @@ ModelImporter:
     400018: Sphere
     400020: Uranus
     400022: Venus
+    400024: Saturnus
     2300000: Bumi
     2300002: Circle
     2300004: Jupiter
@@ -38,6 +40,7 @@ ModelImporter:
     2300016: Sphere
     2300018: Uranus
     2300020: Venus
+    2300022: Saturnus
     3300000: Bumi
     3300002: Circle
     3300004: Jupiter
@@ -49,6 +52,7 @@ ModelImporter:
     3300016: Sphere
     3300018: Uranus
     3300020: Venus
+    3300022: Saturnus
     4300000: Circle
     4300002: Sphere
     4300004: Matahari
@@ -60,6 +64,7 @@ ModelImporter:
     4300016: Bumi
     4300018: Venus
     4300020: Merkurius
+    4300022: Saturnus
     7400000: Default Take
     9500000: //RootNode
   materials:
