@@ -24,6 +24,16 @@ public class CameraZoom : MonoBehaviour {
 		planets.Add("Neptunus");
 		planets.Add("Pluto");
 	}
+
+	public static float MinMax(float min, float max, float value)
+	{
+		if (value < min)
+			return min;
+		else if (value > max)
+			return max;
+		else
+			return value;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,11 +45,10 @@ public class CameraZoom : MonoBehaviour {
 			//float distanceTargetToPlanet = Vector3.Distance(targetPos, curPlanet.transform.position);
 			float distanceToTarget = Vector3.Distance(this.transform.position, targetPos);
 			zoomSpeed = distanceToTarget;
-			this.transform.Translate(direction.normalized * zoomSpeed * Time.deltaTime);
+			this.transform.position += (direction.normalized * zoomSpeed * Time.deltaTime);
 
-			if (distanceToTarget < 1)
+			if (distanceToTarget < 1.0f)
 			{
-				//Debug.Log("lock");
 				//this.transform.position = targetPos;
 				viewLock = true;
 			}
@@ -55,16 +64,27 @@ public class CameraZoom : MonoBehaviour {
 			if (curIndex >= planets.Count)
 				curIndex = 0;
 
-			Debug.Log(planets[curIndex]);
 			curPlanet = GameObject.Find (planets [curIndex].ToString());
 			float size = 0;
 			size += curPlanet.GetComponent<MeshFilter>().mesh.bounds.size.x;
 			size += curPlanet.GetComponent<MeshFilter>().mesh.bounds.size.y;
 			size += curPlanet.GetComponent<MeshFilter>().mesh.bounds.size.z;
 			size = size/3;
-			zoomDistance = (new Vector3 (-1.5f, 3, -1.5f) * size);
+			Vector3 directionSunToPlanet = GameObject.Find("Matahari").transform.position - curPlanet.transform.position;
+			directionSunToPlanet.y = 0;
+			directionSunToPlanet.Normalize();
+			directionSunToPlanet.x -= 0.5f;
+			directionSunToPlanet.z -= 0.25f;
+			directionSunToPlanet.y += 0.5f;
+			directionSunToPlanet.Normalize();
+			//if (planets[curIndex] == "Matahari")
+				//directionSunToPlanet = new Vector3(0,0,0);
+
+			zoomDistance = directionSunToPlanet * size * 2;
+			//zoomDistance = (new Vector3(-1.5f,3,-1.5f) * size);
 			delay = 8.0f;
 			viewLock = false;
+			Debug.Log(planets[curIndex] + "(" + zoomDistance + ")");
 		}
 
 		if (viewLock)

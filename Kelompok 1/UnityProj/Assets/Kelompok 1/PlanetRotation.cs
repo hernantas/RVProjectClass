@@ -8,7 +8,7 @@ public class PlanetRotation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Randomized rotation
-		sunRotation = Random.Range (20, 100)/1000f;
+		sunRotation = Random.Range (20, 60)/1000f;
 	}
 	
 	// Update is called once per frame
