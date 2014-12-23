@@ -1,0 +1,2 @@
+Unable to read material "Default" in .mtl file
+Unable to read material "Default" in .mtl file
