@@ -23,6 +23,8 @@ public class CameraZoom : MonoBehaviour {
 		planets.Add("Uranus");
 		planets.Add("Neptunus");
 		planets.Add("Pluto");
+		planets.Add ("mauriceh_spaceship_model");
+		planets.Add ("spaceship");
 	}
 
 	public static float MinMax(float min, float max, float value)
