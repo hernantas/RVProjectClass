@@ -1,6 +1,0 @@
-Unable to read material "Iron_man_leg:red" in .mtl file
-Unable to read material "Iron_man_leg:red" in .mtl file
-Unable to read material "Iron_man_leg:red" in .mtl file
-Unable to read material "Iron_man_leg:red" in .mtl file
-Unable to read material "Iron_man_leg:red" in .mtl file
-Unable to read material "Iron_man_leg:red" in .mtl file
