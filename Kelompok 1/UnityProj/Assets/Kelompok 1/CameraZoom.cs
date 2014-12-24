@@ -19,7 +19,7 @@ public class CameraZoom : MonoBehaviour {
 		planets.Add("Bumi");
 		planets.Add("Mars");
 		planets.Add("Jupiter");
-		planets.Add("Saturnus");
+		planets.Add("Sphere");
 		planets.Add("Uranus");
 		planets.Add("Neptunus");
 		planets.Add("Pluto");
