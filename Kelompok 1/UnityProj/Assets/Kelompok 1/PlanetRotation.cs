@@ -3,16 +3,18 @@ using System.Collections;
 
 public class PlanetRotation : MonoBehaviour {
 	public float earthHourPerDay = 24.0f;
-	public float earthHousePerYear = 8760.0f;
+	public float earthHousePerYear = 10000000.0f;
+	public string centerObjectName = "Matahari";
 	private GameObject centerObject;
 
 	// Use this for initialization
 	void Start () {
 		// Randomized rotation
 		//sunRotation = Random.Range (20, 60)/100f;
-		centerObject = GameObject.Find ("Matahari");
+		centerObject = GameObject.Find (centerObjectName);
 		this.transform.RotateAround (centerObject.transform.position, new Vector3 (0, 1, 0), Random.Range(0,360));
 		//sunRotation = Random.Range(240,720);
+		//this.GetComponent<Angklung>().CallAngklung(hit.collider.gameObject.name);
 	}
 	
 	// Update is called once per frame

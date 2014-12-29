@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CameraZoom : MonoBehaviour {
 	public float zoomSpeed = 5.0f;
 	private int curIndex = -1;
 	private GameObject curPlanet = null;
-	private ArrayList planets;
+	private List<string> planets;
 	private Vector3 zoomDistance;
 	public float delay = 0;
 	private bool viewLock = false;
 
 	// Use this for initialization
 	void Start () {
-		planets = new ArrayList ();
+		planets = new List<string>();
 		planets.Add("Matahari");
 		planets.Add("Merkurius");
 		planets.Add("Venus");
@@ -24,7 +25,7 @@ public class CameraZoom : MonoBehaviour {
 		planets.Add("Neptunus");
 		planets.Add("Pluto");
 		planets.Add ("mauriceh_spaceship_model");
-		planets.Add ("spaceship");
+		planets.Add ("Junkyard Spaceship");
 	}
 
 	public static float MinMax(float min, float max, float value)
@@ -39,6 +40,26 @@ public class CameraZoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (delay <= 0)
+		{
+			curIndex ++;
+			delay = 8.0f;
+			if (curIndex >= planets.Count)
+				curIndex = 0;
+		}
+
+		GameObject go = GameObject.Find ("solarsystem_plain_texture");
+		GameObject focus = GameObject.Find(planets[curIndex].ToString());
+		MeshFilter filter = focus.GetComponent<MeshFilter> (); 
+		float avgSize  = (filter.mesh.bounds.size.x + filter.mesh.bounds.size.y + filter.mesh.bounds.size.z)/3;
+		Vector3 centerTarget = go.transform.localRotation * focus.transform.localPosition;
+		Vector3 center = this.transform.position + 
+			(this.transform.rotation * new Vector3(0,0,avgSize*3));
+
+		Vector3 focusPos = center - centerTarget;
+		go.transform.position = focusPos;
+
+		/*
 		if (curPlanet != null)
 		{
 			Vector3 targetPos = curPlanet.transform.position + zoomDistance;
@@ -88,8 +109,9 @@ public class CameraZoom : MonoBehaviour {
 			viewLock = false;
 			Debug.Log(planets[curIndex] + "(" + zoomDistance + ")");
 		}
+		*/
 
-		if (viewLock)
+		//if (viewLock)
 			delay -= Time.deltaTime;
 	}
 }

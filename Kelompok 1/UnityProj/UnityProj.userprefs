@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Kelompok 1\CameraZoom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Kelompok 1/Sound.cs">
     <Files>
-      <File FileName="Assets\Kelompok 1\CameraZoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/Kelompok 1/CameraZoom.cs" Line="26" Column="15" />
+      <File FileName="Assets/Kelompok 1/PlanetRotation.cs" Line="6" Column="43" />
+      <File FileName="Assets/Kelompok 1/Sound.cs" Line="18" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
