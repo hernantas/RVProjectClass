@@ -40,28 +40,57 @@ public class CameraZoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-        GameObject marker = GameObject.Find("ImageTarget");
-        Debug.Log(Vector3.Distance(marker.transform.position, Camera.main.transform.position));
-
-        /*
 		if (delay <= 0)
 		{
 			curIndex ++;
 			delay = 8.0f;
 			viewLock = false;
 			if (curIndex >= planets.Count)
+			{
+				Application.LoadLevel("TataSurya");
 				curIndex = 0;
+			}
 		}
 
-        float scale = 740;
+
 		GameObject marker = GameObject.Find ("ImageTarget");
 		GameObject go = GameObject.Find ("solarsystem_plain_texture");
 		GameObject focus = GameObject.Find(planets[curIndex].ToString());
 		MeshFilter filter = focus.GetComponent<MeshFilter> (); 
 		float avgSize  = (filter.mesh.bounds.size.x + filter.mesh.bounds.size.y + filter.mesh.bounds.size.z)/3;
-        Vector3 centerTarget = go.transform.localRotation *  focus.transform.localPosition * scale;
-        Vector3 center = marker.transform.position +
-            (marker.transform.rotation * new Vector3(0, avgSize * scale * 4, 0));
+		//Debug.Log (focus.name + ": " + avgSize);
+		float scaleTarget = (1.3f / avgSize) * ((8-delay)/8);
+		focus.transform.localScale = new Vector3(1,1,1) * scaleTarget; 
+		Vector3 targetPos = -focus.transform.localPosition;
+		//targetPos.y = avgSize*2;
+
+		Vector3 direction = targetPos - go.transform.localPosition;
+		float distance = Vector3.Distance (targetPos, focus.transform.position);
+		go.transform.localPosition = targetPos;
+
+		if (distance < 0.3)
+			viewLock = true;
+
+		//if (viewLock)
+		{
+			delay -= Time.deltaTime;
+		}
+		//else
+			//go.transform.localPosition += (direction.normalized * distance * Time.deltaTime);
+		/*
+
+
+		float scale = 1;
+		GameObject marker = GameObject.Find ("ImageTarget");
+		GameObject go = GameObject.Find ("solarsystem_plain_texture");
+		GameObject focus = GameObject.Find(planets[curIndex].ToString());
+		MeshFilter filter = focus.GetComponent<MeshFilter> (); 
+
+		Vector3 centerTarget = go.transform.localRotation * focus.transform.localPosition;
+		Vector3 center = marker.transform.position + 
+			(marker.transform.rotation * new Vector3(0,-avgSize*scale*4,0));
+
+		Debug.Log (center);
 
 		Vector3 focusPos = center - centerTarget;
 
@@ -69,17 +98,16 @@ public class CameraZoom : MonoBehaviour {
 		Vector3 direction = focusPos - go.transform.position;
 		float distance = Vector3.Distance (focusPos, go.transform.position);
 
-        if (distance < 0.3 * scale)
-			viewLock = true;
 
-        if (viewLock)
-        {
-            go.transform.position = focusPos;
-            delay -= Time.deltaTime;
-        }
-        else
+
+		if (viewLock)
+		{
+			go.transform.position = focusPos;
+			delay -= Time.deltaTime;
+		}
+		else
 			go.transform.position += (direction.normalized * distance * Time.deltaTime);
-        */
+		*/
         /*
 		if (curPlanet != null)
 		{
