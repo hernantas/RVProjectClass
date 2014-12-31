@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: db6f8ef9e24c3334a9051f92181b6880
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bumi
+    100002: Circle
+    100004: Jupiter
+    100006: Mars
+    100008: Matahari
+    100010: Merkurius
+    100012: Neptunus
+    100014: Pluto
+    100016: //RootNode
+    100018: Sphere
+    100020: Uranus
+    100022: Venus
+    100024: Saturnus
+    400000: Bumi
+    400002: Circle
+    400004: Jupiter
+    400006: Mars
+    400008: Matahari
+    400010: Merkurius
+    400012: Neptunus
+    400014: Pluto
+    400016: //RootNode
+    400018: Sphere
+    400020: Uranus
+    400022: Venus
+    400024: Saturnus
+    2300000: Bumi
+    2300002: Circle
+    2300004: Jupiter
+    2300006: Mars
+    2300008: Matahari
+    2300010: Merkurius
+    2300012: Neptunus
+    2300014: Pluto
+    2300016: Sphere
+    2300018: Uranus
+    2300020: Venus
+    2300022: Saturnus
+    3300000: Bumi
+    3300002: Circle
+    3300004: Jupiter
+    3300006: Mars
+    3300008: Matahari
+    3300010: Merkurius
+    3300012: Neptunus
+    3300014: Pluto
+    3300016: Sphere
+    3300018: Uranus
+    3300020: Venus
+    3300022: Saturnus
+    4300000: Circle
+    4300002: Sphere
+    4300004: Matahari
+    4300006: Pluto
+    4300008: Neptunus
+    4300010: Uranus
+    4300012: Jupiter
+    4300014: Mars
+    4300016: Bumi
+    4300018: Venus
+    4300020: Merkurius
+    4300022: Saturnus
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
