@@ -14,8 +14,8 @@ public class WeregarurumonAnimation : MonoBehaviour {
 	void Update () {
 		done = GabumonController.done;
         scale = 1000;
-		if(done == true) 
-		{
+		//if(done == true) 
+		//{
 			if (walkTime <= 4.0f) {
 				transform.Translate (new Vector3(0, 0, 1) * scale  * Time.deltaTime);
 			} 
@@ -34,6 +34,6 @@ public class WeregarurumonAnimation : MonoBehaviour {
 			}
 			walkTime = walkTime + Time.deltaTime;
 			Debug.Log (walkTime);
-		}
+		//}
 	}
 }
