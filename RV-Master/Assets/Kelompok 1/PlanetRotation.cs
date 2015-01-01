@@ -22,11 +22,9 @@ public class PlanetRotation : MonoBehaviour {
 		// selftRotation 24 = 1 day for earth = 100s simulation
 		// 24/24 * 1/360;
 		// inc: 360
-        /*
 		float timescale = 10;
 		this.transform.Rotate(new Vector3(0,0,24/earthHourPerDay)*360/timescale*Time.deltaTime);
 		//Debug.Log ((sunRotation / 365));
 		this.transform.RotateAround (centerObject.transform.position, new Vector3 (0, 1, 0), (24/earthHousePerYear)*360/timescale*Time.deltaTime);
-         * */
 	}
 }

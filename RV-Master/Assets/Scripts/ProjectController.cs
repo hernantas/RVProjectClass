@@ -31,36 +31,46 @@ public class ProjectController : MonoBehaviour {
 
     public void OnGUI()
     {
+        float width = Screen.width/5;
+        float height = Screen.height/3;
+        float sizeX = 50;
         //GUI.DrawTexture(new Rect(50, 70, 100, 100), aTexture, ScaleMode.ScaleToFit, true, 1.0f);
-        if (GUI.Button(new Rect(50, 70, 300, 300), TextureKlp1))
+        if (GUI.Button(new Rect(sizeX, 70, width, height), TextureKlp1))
         {
             Application.LoadLevel(1);
         }
-        if (GUI.Button(new Rect(360, 70, 300, 300), TextureKlp2))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 70, width, height), TextureKlp2))
         {
             Application.LoadLevel(2);
         }
-        if (GUI.Button(new Rect(670, 70, 300, 300), TextureKlp3))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 70, width, height), TextureKlp3))
         {
             Application.LoadLevel(3);
         }
-        if (GUI.Button(new Rect(980, 70, 300, 300), TextureKlp4))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 70, width, height), TextureKlp4))
         {
             Application.LoadLevel(4);
         }
-        if (GUI.Button(new Rect(50, 400, 300, 300), TextureKlp5))
+        sizeX = 50;
+        if (GUI.Button(new Rect(sizeX, 400, width, height), TextureKlp5))
         {
             Application.LoadLevel(5);
         }
-        if (GUI.Button(new Rect(360, 400, 300, 300), TextureKlp6))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 400, width, height), TextureKlp6))
         {
             Application.LoadLevel(6);
         }
-        if (GUI.Button(new Rect(670, 400, 300, 300), TextureKlp7))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 400, width, height), TextureKlp7))
         {
             Application.LoadLevel(7);
         }
-        if (GUI.Button(new Rect(980, 400, 300, 300), TextureKlp8))
+        sizeX = sizeX + width + 40;
+        if (GUI.Button(new Rect(sizeX, 400, width, height), TextureKlp8))
         {
             //Application.LoadLevel(8);
         }

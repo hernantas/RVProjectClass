@@ -14,7 +14,10 @@ public class Sound : MonoBehaviour {
 	
 	}
 
-	void playSound() {
-		audio.PlayOneShot (suara[0], 100.0f);
+	public void playSound(int flag) {
+		if (flag == 1)
+			audio.PlayOneShot (suara [0], 200.0f);
+		else 
+			audio.Stop ();
 	}
 }
